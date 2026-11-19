@@ -1,0 +1,13 @@
+h1{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+button{
+    border-radius: 100px;
+    background-color: rgb(244, 242, 238);
+    color: black;
+}
+

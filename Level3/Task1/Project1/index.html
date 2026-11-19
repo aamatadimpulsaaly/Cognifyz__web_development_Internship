@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer | Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">✈ Travel Explorer</a>
+            <a href="#gallery" class="nav-link">Photo Gallery</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="tag">EXPLORE THE WORLD</span>
+
+                <h1>
+                    Discover the World
+                    <span>Through Pictures</span>
+                </h1>
+
+                <p>
+                    Every picture tells a story. Explore breathtaking
+                    destinations, beautiful landscapes, and unforgettable
+                    places around the world.
+                </p>
+
+                <a href="#gallery" class="explore-btn">
+                    Explore Gallery
+                </a>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="gallery-section" id="gallery">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">TRAVEL COLLECTION</span>
+                    <h2>Explore Our Photo Gallery</h2>
+                    <p>
+                        Click on any destination image to
+                        view it in a larger size.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <!-- Image 1 -->
+                    <a href="#image1" class="gallery-card">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1548013146-72479768bada?w=900"
+                                alt="Taj Mahal, India">
+                            <span class="zoom-icon">⤢</span>
+                        </div>
+
+                        <div class="card-info">
+                            <h3>Taj Mahal</h3>
+                            <p>Agra, India</p>
+                        </div>
+                    </a>
+
+                    <!-- Image 2 -->
+                    <a href="#image2" class="gallery-card">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900"
+                                alt="Eiffel Tower, France">
+                            <span class="zoom-icon">⤢</span>
+                        </div>
+
+                        <div class="card-info">
+                            <h3>Eiffel Tower</h3>
+                            <p>Paris, France</p>
+                        </div>
+                    </a>
+
+                    <!-- Image 3 -->
+                    <a href="#image3" class="gallery-card">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900"
+                                alt="Bali, Indonesia">
+                            <span class="zoom-icon">⤢</span>
+                        </div>
+
+                        <div class="card-info">
+                            <h3>Bali</h3>
+                            <p>Indonesia</p>
+                        </div>
+                    </a>
+
+                    <!-- Image 4 -->
+                    <a href="#image4" class="gallery-card">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900"
+                                alt="Mountain landscape">
+                            <span class="zoom-icon">⤢</span>
+                        </div>
+
+                        <div class="card-info">
+                            <h3>Mountain Escape</h3>
+                            <p>Nature & Adventure</p>
+                        </div>
+                    </a>
+
+                    <!-- Image 5 -->
+                    <a href="#image5" class="gallery-card">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=900"
+                                alt="Beautiful natural landscape">
+                            <span class="zoom-icon">⤢</span>
+                        </div>
+
+                        <div class="card-info">
+                            <h3>Scenic Landscapes</h3>
+                            <p>Explore Nature</p>
+                        </div>
+                    </a>
+
+                    <!-- Image 6 -->
+                    <a href="#image6" class="gallery-card">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900"
+                                alt="Beautiful mountain lake">
+                            <span class="zoom-icon">⤢</span>
+                        </div>
+
+                        <div class="card-info">
+                            <h3>Lake Paradise</h3>
+                            <p>Peaceful Destinations</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Screen Enlarged Images -->
+
+        <div id="image1" class="lightbox">
+            <a href="#gallery" class="lightbox-background"
+               aria-label="Close image"></a>
+            <div class="lightbox-content">
+                <a href="#gallery" class="close-btn"
+                   aria-label="Close image">&times;</a>
+                <img
+                    src="https://images.unsplash.com/photo-1548013146-72479768bada?w=1600"
+                    alt="Enlarged Taj Mahal">
+                <h3>Taj Mahal, India</h3>
+            </div>
+        </div>
+
+        <div id="image2" class="lightbox">
+            <a href="#gallery" class="lightbox-background"
+               aria-label="Close image"></a>
+            <div class="lightbox-content">
+                <a href="#gallery" class="close-btn"
+                   aria-label="Close image">&times;</a>
+                <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600"
+                    alt="Enlarged Eiffel Tower">
+                <h3>Eiffel Tower, France</h3>
+            </div>
+        </div>
+
+        <div id="image3" class="lightbox">
+            <a href="#gallery" class="lightbox-background"
+               aria-label="Close image"></a>
+            <div class="lightbox-content">
+                <a href="#gallery" class="close-btn"
+                   aria-label="Close image">&times;</a>
+                <img
+                    src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600"
+                    alt="Enlarged Bali">
+                <h3>Bali, Indonesia</h3>
+            </div>
+        </div>
+
+        <div id="image4" class="lightbox">
+            <a href="#gallery" class="lightbox-background"
+               aria-label="Close image"></a>
+            <div class="lightbox-content">
+                <a href="#gallery" class="close-btn"
+                   aria-label="Close image">&times;</a>
+                <img
+                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600"
+                    alt="Enlarged mountain landscape">
+                <h3>Mountain Escape</h3>
+            </div>
+        </div>
+
+        <div id="image5" class="lightbox">
+            <a href="#gallery" class="lightbox-background"
+               aria-label="Close image"></a>
+            <div class="lightbox-content">
+                <a href="#gallery" class="close-btn"
+                   aria-label="Close image">&times;</a>
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1600"
+                    alt="Enlarged natural landscape">
+                <h3>Scenic Landscapes</h3>
+            </div>
+        </div>
+
+        <div id="image6" class="lightbox">
+            <a href="#gallery" class="lightbox-background"
+               aria-label="Close image"></a>
+            <div class="lightbox-content">
+                <a href="#gallery" class="close-btn"
+                   aria-label="Close image">&times;</a>
+                <img
+                    src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600"
+                    alt="Enlarged mountain lake">
+                <h3>Lake Paradise</h3>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Travel Explorer. All Rights Reserved.</p>
+        <p>Explore • Discover • Experience</p>
+    </footer>
+
+</body>
+</html>

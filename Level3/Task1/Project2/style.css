@@ -1,0 +1,615 @@
+
+/* ===================================
+   GENERAL STYLING
+=================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #233449;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===================================
+   NAVIGATION BAR
+=================================== */
+
+.navbar {
+    background: #11253b;
+    padding: 20px 0;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #e2ebf3;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f3c977;
+}
+
+/* ===================================
+   INTRODUCTION SECTION
+=================================== */
+
+.intro {
+    padding: 90px 20px 80px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(38, 124, 161, 0.28),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #11253b,
+            #173e59,
+            #205774
+        );
+}
+
+.section-tag {
+    display: inline-block;
+    color: #d3a54f;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.intro .section-tag {
+    color: #f3c977;
+}
+
+.intro h1 {
+    color: white;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.intro p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #d4e2ef;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #f3c977;
+    color: #11253b;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #ffe1a7;
+    transform: translateY(-3px);
+}
+
+/* ===================================
+   SLIDESHOW SECTION
+=================================== */
+
+.slideshow-section {
+    padding: 75px 0 90px;
+}
+
+.section-heading {
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    color: #11253b;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #68788c;
+    font-size: 16px;
+}
+
+/* ===================================
+   SLIDESHOW CONTAINER
+=================================== */
+
+.slideshow {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 530px;
+    margin: auto;
+
+    overflow: hidden;
+    border-radius: 18px;
+    background: #11253b;
+
+    box-shadow:
+        0 20px 50px rgba(17, 37, 59, 0.18);
+}
+
+/* ===================================
+   INDIVIDUAL SLIDES
+=================================== */
+
+.slide {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+
+    animation: slideFade 16s linear infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark overlay for readable text */
+
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(4, 15, 29, 0.82) 0%,
+        rgba(4, 15, 29, 0.50) 45%,
+        rgba(4, 15, 29, 0.12) 100%
+    );
+}
+
+/* ===================================
+   SLIDE TEXT
+=================================== */
+
+.slide-content {
+    position: absolute;
+    z-index: 2;
+
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+
+    max-width: 550px;
+    padding-right: 20px;
+
+    color: white;
+}
+
+.slide-number {
+    display: inline-block;
+    font-size: 13px;
+    color: #e3ebf3;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+}
+
+.slide-tag {
+    color: #f3c977;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.slide-content h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    color: white;
+}
+
+.slide-content > p:last-child {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e1ebf3;
+}
+
+/* ===================================
+   SLIDE TIMING
+   4 slides x 4 seconds = 16 seconds
+=================================== */
+
+.slide-1 {
+    animation-delay: 0s;
+}
+
+.slide-2 {
+    animation-delay: -12s;
+}
+
+.slide-3 {
+    animation-delay: -8s;
+}
+
+.slide-4 {
+    animation-delay: -4s;
+}
+
+/*
+Each slide is visible for approximately
+4 seconds, including its fade transition.
+*/
+
+@keyframes slideFade {
+
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ===================================
+   ANIMATED SLIDE INDICATORS
+=================================== */
+
+.slide-indicators {
+    position: absolute;
+    z-index: 5;
+    bottom: 30px;
+    left: 7%;
+
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    display: block;
+    width: 34px;
+    height: 4px;
+
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+
+    animation: indicatorActive 16s linear infinite;
+}
+
+.indicator-1 {
+    animation-delay: 0s;
+}
+
+.indicator-2 {
+    animation-delay: -12s;
+}
+
+.indicator-3 {
+    animation-delay: -8s;
+}
+
+.indicator-4 {
+    animation-delay: -4s;
+}
+
+@keyframes indicatorActive {
+
+    0%, 20% {
+        background: #f3c977;
+    }
+
+    25%, 95% {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        background: #f3c977;
+    }
+}
+
+/* ===================================
+   ABOUT SECTION
+=================================== */
+
+.about-section {
+    background: #eaf0f6;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: #11253b;
+    margin-bottom: 20px;
+}
+
+.about-section > .about-container > p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #68788c;
+    font-size: 16px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 45px;
+}
+
+.feature {
+    padding: 35px 25px;
+    background: white;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(17, 37, 59, 0.06);
+}
+
+.feature-icon {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 21px;
+    color: #11253b;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #68788c;
+    font-size: 15px;
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer {
+    background: #11253b;
+    color: #d4e2ef;
+    padding: 28px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p + p {
+    color: #f3c977;
+    margin-top: 6px;
+}
+
+/* ===================================
+   TABLET RESPONSIVENESS
+=================================== */
+
+@media (max-width: 900px) {
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    .slideshow {
+        height: 470px;
+    }
+
+    .slide-content h2 {
+        font-size: 44px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-heading h2,
+    .about-section h2 {
+        font-size: 30px;
+    }
+}
+
+/* ===================================
+   MOBILE RESPONSIVENESS
+=================================== */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .intro {
+        padding: 65px 20px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .intro p {
+        font-size: 15px;
+    }
+
+    .slideshow-section {
+        padding: 55px 0 65px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .slideshow {
+        width: 92%;
+        height: 490px;
+        border-radius: 12px;
+    }
+
+    .slide-overlay {
+        background: linear-gradient(
+            0deg,
+            rgba(4, 15, 29, 0.9),
+            rgba(4, 15, 29, 0.25)
+        );
+    }
+
+    .slide-content {
+        left: 7%;
+        right: 7%;
+        top: auto;
+        bottom: 75px;
+        transform: none;
+        max-width: none;
+        padding-right: 0;
+    }
+
+    .slide-number {
+        margin-bottom: 20px;
+    }
+
+    .slide-content h2 {
+        font-size: 34px;
+    }
+
+    .slide-content > p:last-child {
+        font-size: 15px;
+    }
+
+    .slide-indicators {
+        bottom: 30px;
+    }
+
+    .indicator {
+        width: 26px;
+    }
+
+    .about-section {
+        padding: 55px 20px;
+    }
+
+    .about-section h2 {
+        font-size: 27px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================
+   EXTRA SMALL MOBILE
+=================================== */
+
+@media (max-width: 400px) {
+
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .slide-content h2 {
+        font-size: 29px;
+    }
+
+    .slide-content > p:last-child {
+        font-size: 14px;
+    }
+}
+
+/* ===================================
+   ACCESSIBILITY
+=================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .slide,
+    .indicator {
+        animation: none;
+    }
+
+    .slide {
+        opacity: 0;
+    }
+
+    .slide-1 {
+        opacity: 1;
+    }
+}

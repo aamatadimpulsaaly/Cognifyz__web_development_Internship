@@ -1,0 +1,26 @@
+nav{
+    background-color: #123456;
+    display: flex; 
+                 /* used to place items side by side */
+    justify-content: space-between;
+                  /* controls horizontal spacing between title and links */
+    align-items: center;
+               /* align items vertically */
+    padding: 2px;
+}
+div{
+    display: flex;
+    gap: 30px;
+}
+a{
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+h1{
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: xx-large;
+    font-weight: bolder;
+}
